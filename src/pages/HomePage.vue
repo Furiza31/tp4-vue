@@ -7,6 +7,7 @@
     <BaseButton color="secondary">Secondary Button</BaseButton>
     <BaseButton color="danger">Danger Button</BaseButton>  
     <AsyncButton @click="handleAsyncClick">Async Button</AsyncButton>
+    <AsyncButton color="secondary" @click="handleAsyncClick2">Wait {{ this.count }} secondes</AsyncButton>
   </div>
 </template>
 
@@ -20,6 +21,12 @@ export default {
     BaseButton,
     AsyncButton
   },
+  data() {
+  return {
+    isPending: false,
+    count: 1
+  }
+    },
   methods: {
     handleAsyncClick() {
       // Simule une action asynchrone (ex. appel API)
@@ -29,6 +36,15 @@ export default {
           resolve()
         }, 2000)
       })
+    },
+    handleAsyncClick2() {
+        
+        return new Promise(resolve => {
+            setTimeout(() => {
+            this.count++
+            resolve()
+            }, this.count * 1000)
+        })
     }
   }
 }

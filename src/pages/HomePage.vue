@@ -4,6 +4,8 @@
     <p>This is a simple home page component.</p>
     <BaseButton>Click Me!</BaseButton>
     <BaseButton disabled>Disabled Button</BaseButton>
+    <BaseButton color="secondary">Secondary Button</BaseButton>
+    <BaseButton color="danger">Danger Button</BaseButton>
   </div>
 </template>
 

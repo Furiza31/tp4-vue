@@ -13,6 +13,7 @@
 
 <script>
 import { useUserStore } from "@/store/user";
+import { useRouter } from "vue-router";
 import baseButton from "./baseButton.vue";
 
 export default {
@@ -22,9 +23,11 @@ export default {
   },
   setup() {
     const userStore = useUserStore();
+    const router = useRouter();
 
     return {
       userStore,
+      router,
     };
   },
   methods: {
@@ -37,6 +40,7 @@ export default {
     },
     handleSignOut() {
       this.userStore.signOut();
+      this.router.push("/");
     },
   },
 };

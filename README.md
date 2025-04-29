@@ -1,3 +1,5 @@
+### TP4
+
 ### Question 1  
 That is the main difference between local installation and global installation of packages with npm? What kind of packages do you generally install locally? What kind is generally installed globally?
 
@@ -73,3 +75,7 @@ Which bug is introduced if `inheritAttrs: false` is missing or set to true in As
 
 **Réponse :**  
 Si `inheritAttrs: false` n’est pas défini (ou reste `true`), tous les attributs non-prop (classe, style, disabled…) sont appliqués à l’élément racine du composant (souvent une `<div>` de wrapper) au lieu du `<button>` interne. Cela casse le style et le comportement attendu (par exemple `disabled` sur le mauvais élément), car le véritable bouton n’hérite pas de ces attributs.  
+
+
+### TP5
+

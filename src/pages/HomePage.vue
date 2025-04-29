@@ -8,18 +8,21 @@
     <BaseButton color="danger">Danger Button</BaseButton>  
     <AsyncButton @click="handleAsyncClick">Async Button</AsyncButton>
     <AsyncButton color="secondary" @click="handleAsyncClick2">Wait {{ this.count }} secondes</AsyncButton>
+    <SigninButton />
   </div>
 </template>
 
 <script>
 import BaseButton from '../components/baseButton.vue'
 import AsyncButton from '../components/asyncButton.vue'
+import SigninButton from '../components/SigninButton.vue'
 
 export default {
   name: 'HomePage',
   components: {
     BaseButton,
-    AsyncButton
+    AsyncButton,
+    SigninButton
   },
   data() {
   return {
